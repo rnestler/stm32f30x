@@ -4,6 +4,15 @@
 
 # [Documentation](https://docs.rs/stm32f30x)
 
+# Building
+
+See also the ./ci/script.sh script
+```
+curl -LO https://github.com/posborne/cmsis-svd/raw/python-0.4/data/STMicro/STM32F30x.svd
+dos2unix STM32F30x.svd
+patch -p1 STM32F30x.svd < "${svd%.*}.patch"
+```
+
 # License
 
 Licensed under either of
